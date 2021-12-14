@@ -1,0 +1,15 @@
+$colors: (
+
+pr-cyan: hsl(179, 62%, 43%),
+pr-lighter-cyan: #4ABEBD,
+pr-bright-yellow: hsl(71, 73%, 54%),
+nt-light-gray: hsl(204, 43%, 93%),
+nt-grayish-blue: hsl(218, 22%, 67%),
+);
+
+$f-size-title-h1: clamp(1.25rem, 3vw, 1.5rem);
+$f-size-title-h2: 1.12rem;
+$f-size-subtitle: clamp(.95rem, 3vw, 1.1rem);
+$f-size-text: clamp(.85rem, 3vw, 1rem);
+$f-size-list: clamp(.9rem, 2vw, .95rem);
+$f-size-price: clamp(1.8rem, 3vw, 2rem);

@@ -1,0 +1,151 @@
+@import 'variables', 'functions', 'reset';
+
+
+main{
+    padding: 4.5em 2em;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    place-content: center;
+    background: color(nt-light-gray);
+}
+
+.price-grid{
+    border-radius: 7px;
+    overflow: hidden;
+    max-width: 635px;
+}
+
+.col{
+    padding: .7em 1.5em;
+    
+}
+
+.join{
+    background: white;
+    .join__title{
+        font-size: $f-size-title-h1;
+        color: color(pr-cyan);
+        margin-bottom: 1.4em;
+    }
+
+    .join__subtitle{
+        font-size: $f-size-subtitle;
+        color: color(pr-bright-yellow);
+        font-weight: 700;
+        line-height: 1.3;
+    }
+
+    .join__text{
+        line-height: 1.9;
+        color: color(nt-grayish-blue);
+        font-size: $f-size-text;
+    }
+}
+
+.subscription{
+    background: color(pr-cyan);
+    color: white;
+
+    .subscription__title{
+        font-size: $f-size-title-h2;
+    }
+
+    .subscription__price{
+        color: color(nt-light-gray);
+        .price{
+            color: white;
+            font-size: $f-size-price;
+            font-weight: 700;
+            margin-right: 5px;
+        }
+
+        .per-month{
+            opacity: .5;
+            margin-left: 5px;
+        }
+    }
+
+    .subscription__text{
+        color: color(nt-light-gray);
+    }
+
+    .subscription__sign-up{
+        display: block;
+        text-decoration: none;
+        color: white;
+        font-weight: 700;
+        border-radius: 5px;
+        width: 100%;
+        max-width: 350px;
+        text-align: center;
+        padding: 1em 3em;
+        background: color(pr-bright-yellow);
+        margin: 2em auto .5em auto;
+
+    }
+}
+
+.why-us{
+    color: color(nt-light-gray);
+    background: color(pr-lighter-cyan);
+
+    .why-us__title{
+        font-size: $f-size-title-h2;
+        color: white;
+        margin-bottom: 1em;
+    }
+
+    .why-us__list{
+        list-style: none;
+        padding: 0;
+    }
+    
+    a{
+        font-size: $f-size-list;
+        color: white;
+        opacity: .7;
+        text-decoration: none;
+    }
+
+    .why-us__list__items{
+        line-height: 1.4;
+    }
+}
+
+
+@media (min-width: 700px){
+
+    .price-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "join join" "sub why";
+    }
+
+    .col{
+        padding: 1.5em 2.5em;
+    }
+
+    .join{
+        grid-area: join;
+
+        .join__title{
+            margin-bottom: 1em;
+        }
+
+        .join__text{
+            line-height: 1.5;
+
+            p{ margin-top: 0; }
+        }
+    }
+
+    .subscription{
+        grid-area: sub;
+    }
+
+    .why-us{
+        grid-area: why;
+    }
+}
